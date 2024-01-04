@@ -1,12 +1,12 @@
 :root {
     --global-text-font: normal normal 400 16px/1.25 'Jost', sans-serif;
-    --banner-text-font: normal normal 700 3rem/1.04 'Jost', sans-serif;;
-    --main-heading-font: normal normal 700 2.25rem/1.17 'Jost', sans-serif;;
-    --heading-font: normal normal 500 1.5rem/1.33 'Jost', sans-serif;;
-    --subtitle-font: normal normal 500 1.5rem/1.33 'Work Sans', sans-serif;;
-    --headline-font: normal normal 500 0.875rem/1.43 'Jost', sans-serif;;
-    --body-font: normal normal 400 0.875rem/1.43 'Jost', sans-serif;;
-    --button-font: normal normal 500 1em/1.25 'Jost', sans-serif;;
+    --button-font: normal normal 500 1em/1.25 'Jost', sans-serif;
+    /* --banner-text-font: normal normal 700 3rem/1.04 'Jost', sans-serif;
+    --main-heading-font: normal normal 700 2.25rem/1.17 'Jost', sans-serif;
+    --heading-font: normal normal 500 1.5rem/1.33 'Jost', sans-serif;
+    --subtitle-font: normal normal 500 1.5rem/1.33 'Work Sans', sans-serif;
+    --headline-font: normal normal 500 0.875rem/1.43 'Jost', sans-serif;
+    --body-font: normal normal 400 0.875rem/1.43 'Jost', sans-serif; */
 
     --primary-color: #f6623e;
     --secondary-color: #454545;
@@ -36,6 +36,11 @@ button {
     transition-duration: var(--transition-duration);
 }
 
+.container {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
 .button {
     /* width: 140px;
     height: 47px; */
@@ -50,6 +55,10 @@ button {
     background-color: var(--primary-color);
 
     transition-duration: var(--transition-duration);
+}
+
+a.button {
+    display: inline-block;
 }
 
 .button:hover {
@@ -202,6 +211,50 @@ button {
     border-radius: 50%;
 }
 
+.main-flagship {
+    position: relative;
+    background: url('../images/flagship-slider-image.jpg') bottom center no-repeat,
+                url('../images/flagship-image.jpg') top center no-repeat;
+                
+    height: 671px;
+   
+}
+
+.main-flagship-inner {
+    position: absolute;
+    right: 20.3%;
+    top: 150px;
+
+}
+
+.main-flagship-brand {
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.main-flagship-brand:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.main-flagship-name {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.main-flagship-name:not(:last-child) {
+    margin-bottom: 11px;
+}
+
+.main-flagship-description {
+    line-height: 1.81;
+    max-width: 530px;
+}
+
+.main-flagship-description:not(:last-child) {
+    margin-bottom: 40px;
+}
+
 @media (max-width: 1024px) {
     .header-top {
         height: 75px;
@@ -215,7 +268,7 @@ button {
 
     .header-body {
         flex-wrap: wrap;
-        padding-block: 30px;
+        padding-block: 30px 125px;
         padding-inline: 80px 80px;
     }
 
@@ -225,6 +278,18 @@ button {
 
     .header-menu {
         order: 1;
+    }
+
+    .main-flagship {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: bottom left, top left;
+    }
+
+    .main-flagship-inner {
+        right: unset;
+        padding-inline: 20px;
     }
 }
 
