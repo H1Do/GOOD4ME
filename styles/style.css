@@ -1,6 +1,7 @@
 :root {
     --global-text-font: normal normal 400 16px/1.25 'Jost', sans-serif;
-    --button-font: normal normal 500 1em/1.25 'Jost', sans-serif;
+    --button-font: normal normal 500 1rem/1.25 'Jost', sans-serif;
+    --description-font: normal normal 500 1.125rem/1.33 'Jost', sans-serif;
     /* --banner-text-font: normal normal 700 3rem/1.04 'Jost', sans-serif;
     --main-heading-font: normal normal 700 2.25rem/1.17 'Jost', sans-serif;
     --heading-font: normal normal 500 1.5rem/1.33 'Jost', sans-serif;
@@ -12,6 +13,7 @@
     --secondary-color: #454545;
     --light-gray-color: #9d9d9d;
     --light-color: #ffffff;
+    --lightest-gray-color: #E8E8E8;
     --dark-color: #000000;
 
     --transition-duration: 0.2s;
@@ -255,6 +257,128 @@ a.button {
     margin-bottom: 40px;
 }
 
+.main-deal {
+    padding-block: 66px 139px;
+}
+
+.main-deal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 37px;
+}
+
+.main-deal-headline {
+    position: relative;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 24px;
+}
+
+.main-deal-headline::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% -100%;
+
+
+    width: 127px;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+.main-deal-headline:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.main-deal-description {
+    color: var(--secondary-color);
+    font: var(--description-font);
+
+    text-align: center;
+    max-width: 760px;
+    padding-inline: 60px;
+}
+
+.main-deal-products:not(:last-child) {
+    margin-bottom: 138px;
+}
+
+.main-deal-products-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 31px;
+    padding-inline: 60px;
+}
+
+.main-deal-products-image {
+    width: 400px;
+    max-height: 410px;
+    height: auto;
+}
+
+.main-deal-products-image:not(:last-child) {
+    margin-bottom: 22px;
+}
+
+.main-deal-products-item:nth-of-type(odd) .main-deal-products-image {
+    padding-inline: clamp(10px, 2.19vw, 42px);
+    padding-block: clamp(10px, 2.34vw, 45px);
+    background-color: #F4F3F4;
+    border: 1px solid #E8E8E8;
+}
+
+.main-deal-products-description {
+    color: var(--dark-color);
+    font: var(--description-font);
+    text-align: center;
+}
+
+.main-deal-advantages-list {
+    display: flex;
+    justify-content: center;
+    column-gap: clamp(60px, 10.9vw, 210px);
+    padding-inline: 60px;
+}
+
+.main-deal-advantages-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 284px;
+    text-align: center;
+}
+
+.main-deal-advantages-image {
+    position: relative;
+    padding: 3px;
+}
+
+.main-deal-advantages-image::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 45px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    
+    z-index: -1;
+
+    background-color: var(--primary-color);
+}
+
+.main-deal-advantages-image:not(:last-child) {
+    margin-bottom: 22px;
+}
+
+.main-deal-advantages-name:not(:last-child) {
+    margin-bottom: 11px;
+}
+
 @media (max-width: 1024px) {
     .header-top {
         height: 75px;
@@ -290,6 +414,17 @@ a.button {
     .main-flagship-inner {
         right: unset;
         padding-inline: 20px;
+    }
+
+    .main-deal-products-list {
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .main-deal-advantages-list {
+        flex-wrap: wrap;
+        row-gap: 30px;
     }
 }
 
