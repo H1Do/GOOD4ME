@@ -67,7 +67,7 @@ a.button {
     background-color: #b4492e;
 }
 
-.button.transparent {
+.transparent {
     line-height: 1.56;
     padding-inline: 48px;
     padding-block: 15px;
@@ -379,6 +379,78 @@ a.button {
     margin-bottom: 11px;
 }
 
+.main-benefit {
+    display: flex;
+    padding-right: 20px;
+
+}
+
+.main-benefit-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    padding-block: 50px;
+    padding-inline: clamp(50px, 10.4vw, 200px) clamp(50px, 15.15vw, 291px);
+
+    background-color: #FFF8F6;
+}
+
+.main-benefit-headline {
+    font-size: 3.125rem;
+    line-height: 1.44;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+
+.main-benefit-headline:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.main-benefit-description {
+    max-width: 500px;
+    color: var(--secondary-color);
+    line-height: 1.56;
+}
+
+.main-benefit-description:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.main-benefit-description :not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.main-benefit-button {
+    padding-inline: 45px;
+    padding-block: 18px 13px;
+}
+
+.main-benefit-collage {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    row-gap: clamp(5px, 1.45vw, 28px);
+    column-gap: clamp(6px, 1.5vw, 30px);
+
+    margin-left: -122px;
+    height: 100%;
+}
+
+.main-benefit-image {
+    height: 100%;
+}
+
+.main-benefit-image:nth-of-type(2) {
+    order: 1;
+}
+
+.main-benefit-image:nth-of-type(3) {
+    grid-row: 2 span;
+}
+
+
 @media (max-width: 1024px) {
     .header-top {
         height: 75px;
@@ -425,6 +497,27 @@ a.button {
     .main-deal-advantages-list {
         flex-wrap: wrap;
         row-gap: 30px;
+    }
+
+    .main-benefit {
+        flex-direction: column;
+        /* align-items: center; */
+        padding: 0;
+    }
+
+    .main-benefit-body {
+        padding-bottom: 200px;
+    }
+
+    .main-benefit-headline {
+        text-wrap: wrap;
+    }
+
+    .main-benefit-collage {
+        align-self: center;
+        justify-self: center;
+        margin: -123px 0 0 0;
+        padding-inline: 10px;
     }
 }
 
