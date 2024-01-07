@@ -126,7 +126,6 @@ a.button {
 .products-name {
     font-weight: 500;
     line-height: 1;
-
 }
 
 .products-price {
@@ -496,6 +495,92 @@ a.button {
     margin-bottom: 60px;
 }
 
+.main-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 106px;;
+
+    padding-inline: 50px;
+    padding-block: 176px;
+
+    background: url('../images/header-background-review-image.jpg') no-repeat top center,
+                url('../images/footer-background-review-image.png') no-repeat bottom center;
+    background-color: #FEF0E7;
+}
+
+.main-review-body {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+}
+
+.main-review-headline, .main-review-name {
+    letter-spacing: 0.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.main-review-headline {
+    font-size: 1.25rem;
+}
+
+.main-review-headline:not(:last-child) {
+    margin-bottom: 46px;
+}
+
+.main-review-name {
+    font-size: 1.875rem;
+    color: var(--primary-color);
+}
+
+:is(.main-review-name, .main-review-rating, .main-review-author) {
+    margin-bottom: 24px;
+}
+
+.main-review-content {
+    color: var(--secondary-color);
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: 1.69;
+    letter-spacing: 1px;
+}
+
+.main-review-content:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.main-review-author {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main-review-author:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.main-review-slider-actions {
+    display: flex;
+    column-gap: 20px;
+}
+
+.main-review-slider-button {
+    border: none;
+    background-color: transparent;
+    height: 50%;
+}
+
+.main-review-slider-button * {
+    transition-duration: var(--transition-duration);
+}
+
+.main-review-slider-button:hover * {
+    fill: var(--secondary-color);
+    background-color: var(--light-gray-color);
+}
+
 @media (max-width: 1024px) {
     .products-list {
         flex-wrap: wrap;
@@ -563,6 +648,11 @@ a.button {
         justify-self: center;
         margin: -123px 0 0 0;
         padding-inline: 10px;
+    }
+
+    .main-review {
+        flex-direction: column;
+        row-gap: 30px;
     }
 }
 
