@@ -685,23 +685,32 @@ a.button {
     align-items: center;
 }
 
+.main-gallery-headline {
+    padding: 0;
+}
+
+.main-gallery-headline:not(:last-child) {
+    margin-bottom: 41px;
+}
+
 .main-gallery-list {
     display: flex;
     overflow-y: hidden;
     overflow-x: auto;
-    max-height: 318px;
-    padding: 20px;
+    height: 323px;
+    padding-inline: 20px;
     column-gap: 30px;
     scroll-snap-type: x mandatory;
 }
 
 .main-gallery-item {
+    display: flex;
     flex: 0 0 auto;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    align-items: center;
 }
 
 .main-gallery-image {
-    max-width: 100%;
     height: auto;
 }
 
@@ -737,7 +746,6 @@ a.button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .footer-body-mailing-headline, .footer-body-info-headline {
